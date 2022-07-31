@@ -12,11 +12,12 @@ class Task extends Model
     use HasFactory;
 
     protected $fillable = [
+        'is_done',
         'title',
+        'category_id',
         'description',
         'due_date',
         'user_id',
-        'category_id'
     ];
 
     public function user()
@@ -31,8 +32,8 @@ class Task extends Model
     }
 
     protected $hidden = [
-        'user_id',
-        'category_id'
-        
+      //aqui insiro os dados que eu quero ocultar na view, exemplo 'user_id'
+      'user_id' 
+    
     ];
 }

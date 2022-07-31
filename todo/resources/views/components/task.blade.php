@@ -1,6 +1,7 @@
 <div class="task">
     <div class="title">
-        <input type="checkbox" @if( $data && $data ['done']) checked @endif />
+        <input type="checkbox" 
+        @if( $data && $data ['is_done']) checked @endif />
         <div class="task_title">
             {{ $data[ 'title'] ?? ''}}
         </div>
@@ -8,14 +9,14 @@
     <div class="priority">
         <div class="sphere"></div>
         <div>
-            {{ $data ['category'] ?? '' }}
+            {{ $data ['category']->title ?? '' }}
         </div>
     </div>
     <div class="actions">
-        <a href="http://meusite.com/edit/{{ $data ['id'] ?? '' }}">
+        <a href="{{ route('tasks.edit', ['id'=>$data['id']] )}}">
             <img src="/assets/images/icon-edit.png" />
         </a>
-        <a href="http://meusite.com/delete/{{ $data ['id'] ?? '' }}">
+        <a href="{{ route('tasks.delete', ['id'=>$data['id']] ) }}">
             <img src="/assets/images/icon-delete.png" />
         </a>
     </div>

@@ -25,8 +25,9 @@ class TaskFactory extends Factory
         }
 
         return [
+            'is_done'=> fake()->boolean(),
             'title' => fake()->text(30),
-            'description' => fake()->text(150),
+            'description' => fake()->text(30),
             'due_date' => fake()->dateTime(),
             //'user_id' =>User::all()->random(), para indicar que a tabela Task vai gerar os id para
             //usuário aleatoriamente de acordo com a quantidade de usuário existente 

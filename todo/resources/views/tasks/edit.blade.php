@@ -1,12 +1,12 @@
-<x-layout page="Login" >
+<x-layout page="Editar Tarefa" >
 
     <x-slot:btn>
-        <a href="{{route('register')}}" class="btn btn-primary">
-            Já possui conta? Faça Login
+        <a href="{{route('home')}}" class="btn btn-primary">
+            Voltar
         </a>
        
     </x-slot:btn>
-    Tela de Login
+    Tela de Editar Tarefa
     <a href="{{ route('home') }}" class="btn btn-primary">
     Voltar para pagina inicial
     </a>
