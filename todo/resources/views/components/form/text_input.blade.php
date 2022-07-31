@@ -8,6 +8,8 @@
     id="{{ $name }}" 
     placeholder="{{$placeholder ?? ''}}" 
     {{ empty($required) ? 'required':'' }}
+
+    value="{{ $value ?? '' }}"
     />
 
 </div>
