@@ -12,6 +12,12 @@
             @csrf
             <input type="hidden" name="id" value="{{ $task->id }}" />
 
+ <x-form.checkbox_input
+                name="is_done"
+                label="A tarefa foi concluída?"
+                checked="{{ $task->is_done }}"
+            />
+
             <x-form.text_input 
             name="title" 
             label="Titulo da Tarefa" 
@@ -46,6 +52,8 @@
             placeholder="Digite uma Descrição para sua Tarefa" 
             value="{{ $task->description }}"
             />
+            
+           
 
             <x-form.button 
             type="reset">Resetar
